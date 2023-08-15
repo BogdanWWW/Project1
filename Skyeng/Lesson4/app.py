@@ -1,26 +1,21 @@
-def count_symbols(input_string):
-    symbol_count = {}
 
-    for char in input_string:
-        if char in symbol_count:
-            symbol_count[char] += 1
-        else:
-            symbol_count[char] = 1
 
-    return symbol_count
 
-prompt = "Hey what is your name and family name? "
-user_input = input(prompt)
+prompt = "Hey what is ur name and famiely name?";
+x = input(prompt)
+y = x*10
 
-if len(user_input) == 0:
-    print("You need to write your full name!")
+def has_space(message):
+    return " " in message
+
+user_input = input("Enter a message: ")
+
+if has_space(user_input):
+    print("Thank you for thath information.")
 else:
-    symbol_counts = count_symbols(user_input)
-    print("Thank you for that information.")
+    print("You need to write youre full name!")
 
-    for symbol, count in symbol_counts.items():
-        print(f"Symbol '{symbol}' was used  {count} times")
-
-
-
-
+counter = 0
+for c in "educative":
+    counter+=1
+print (counter)
